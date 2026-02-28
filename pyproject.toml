@@ -1,6 +1,6 @@
 [project]
 name = "unipay-uz"
-version = "1.0.0"
+version = "1.0.1"
 description = "Unified payment library for Uzbekistan payment systems (Payme, Click, Uzum, Paynet, Octo)"
 readme = "README.md"
 license = "MIT"
