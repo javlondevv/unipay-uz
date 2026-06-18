@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 💬 Questions & discussions
+    url: https://github.com/javlondevv/unipay-uz/discussions
+    about: Ask questions and discuss ideas with the community.
+  - name: 📦 PyPI project
+    url: https://pypi.org/project/unipay-uz/
+    about: Installation and release info.
+  - name: ✈️ Telegram
+    url: https://t.me/DevFlowJavlon
+    about: Reach the author directly.
