@@ -18,6 +18,7 @@
   <a href="https://pypi.org/project/unipay-uz/"><img src="https://img.shields.io/pypi/dm/unipay-uz.svg?color=blue" alt="PyPI downloads"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"></a>
   <a href="https://github.com/javlondevv/unipay-uz/actions/workflows/ci.yml"><img src="https://github.com/javlondevv/unipay-uz/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://javlondevv.github.io/unipay-uz/"><img src="https://img.shields.io/badge/docs-mkdocs--material-blue.svg" alt="Documentation"></a>
   <br>
   <a href="https://github.com/javlondevv/unipay-uz/stargazers"><img src="https://img.shields.io/github/stars/javlondevv/unipay-uz?style=social" alt="GitHub stars"></a>
   <a href="https://github.com/javlondevv/unipay-uz/issues"><img src="https://img.shields.io/github/issues/javlondevv/unipay-uz.svg" alt="Open issues"></a>
