@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: build & import (py${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.9", "3.10", "3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Install (base)
+        run: python -m pip install -e .
+      - name: Import smoke test
+        run: |
+          python -c "import unipay_uz; print('unipay-uz', unipay_uz.__version__)"
+          python -c "from unipay_uz.gateways.payme.client import PaymeGateway; from unipay_uz.gateways.click.client import ClickGateway; print('gateways import OK')"
+      - name: Build distribution
+        run: |
+          python -m pip install build twine
+          python -m build
+          twine check dist/*
+
+  lint:
+    # Non-blocking: surfaces style issues without breaking the build until the
+    # codebase is fully formatted. TODO: drop continue-on-error once clean,
+    # and add a pytest job here when a test suite lands.
+    name: lint (informational)
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install linters
+        run: python -m pip install flake8 isort black mypy
+      - name: flake8
+        run: flake8 unipay_uz || true
+      - name: isort (check)
+        run: isort --check-only --profile black unipay_uz || true
+      - name: black (check)
+        run: black --check unipay_uz || true

@@ -26,3 +26,9 @@ Thumbs.db
 # Temporary files
 *.log
 rewrite_comments.py
+
+# Secrets — never commit
+PyPI-Recovery-Codes-*.txt
+*recovery-codes*
+.env
+*.pem
