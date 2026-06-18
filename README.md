@@ -1,8 +1,55 @@
-# 💳 UniPay UZ
+<p align="center">
+  <a href="https://github.com/javlondevv/unipay-uz">
+    <img src="assets/banner.svg" alt="UniPay UZ" width="100%">
+  </a>
+</p>
 
-[![PyPI version](https://badge.fury.io/py/unipay-uz.svg)](https://badge.fury.io/py/unipay-uz)
-[![Python Versions](https://img.shields.io/pypi/pyversions/unipay-uz.svg)](https://pypi.org/project/unipay-uz/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+<h1 align="center">💳 UniPay UZ</h1>
+
+<p align="center">
+  <b>One unified Python API for Uzbekistan's payment gateways —
+  Payme · Click · Uzum · Paynet · Octo.</b><br>
+  First-class integrations for Django, FastAPI, and Flask.
+</p>
+
+<p align="center">
+  <a href="https://pypi.org/project/unipay-uz/"><img src="https://img.shields.io/pypi/v/unipay-uz.svg" alt="PyPI version"></a>
+  <a href="https://pypi.org/project/unipay-uz/"><img src="https://img.shields.io/pypi/pyversions/unipay-uz.svg" alt="Python Versions"></a>
+  <a href="https://pypi.org/project/unipay-uz/"><img src="https://img.shields.io/pypi/dm/unipay-uz.svg?color=blue" alt="PyPI downloads"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"></a>
+  <a href="https://github.com/javlondevv/unipay-uz/actions/workflows/ci.yml"><img src="https://github.com/javlondevv/unipay-uz/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <br>
+  <a href="https://github.com/javlondevv/unipay-uz/stargazers"><img src="https://img.shields.io/github/stars/javlondevv/unipay-uz?style=social" alt="GitHub stars"></a>
+  <a href="https://github.com/javlondevv/unipay-uz/issues"><img src="https://img.shields.io/github/issues/javlondevv/unipay-uz.svg" alt="Open issues"></a>
+  <a href="https://github.com/javlondevv/unipay-uz/commits/main"><img src="https://img.shields.io/github/last-commit/javlondevv/unipay-uz.svg" alt="Last commit"></a>
+</p>
+
+<p align="center">
+  <b>🌐 English</b> · <a href="README.ru.md">Русский</a>
+</p>
+
+<p align="center">
+  <b>Saving you a week of payment-gateway boilerplate? Please <a href="https://github.com/javlondevv/unipay-uz">⭐ star the repo</a> — it helps other Uzbek developers find it.</b>
+  &nbsp;·&nbsp;
+  <a href="https://twitter.com/intent/tweet?text=UniPay%20UZ%20%E2%80%94%20one%20Python%20API%20for%20Payme%2C%20Click%2C%20Uzum%2C%20Paynet%20%26%20Octo&url=https://github.com/javlondevv/unipay-uz&hashtags=Python,Uzbekistan,fintech,Django"><img src="https://img.shields.io/badge/Tweet-share-1DA1F2?logo=twitter&logoColor=white" alt="Tweet"></a>
+</p>
+
+---
+
+## 📑 Table of Contents
+
+- [Why Choose UniPay UZ?](#-why-choose-unipay-uz)
+- [Installation Guide](#️-installation-guide)
+- [Jumpstart Your Integration](#-jumpstart-your-integration)
+  - [Generating Checkout Links](#1-generating-checkout-links)
+  - [Provider-Specific Details](#2-provider-specific-details)
+- [Deep Dive: Django Blueprint](#️-deep-dive-django-blueprint)
+- [Contributing](#-contributing)
+- [Support the Project](#-support-the-project)
+- [Meet the Author](#-meet-the-author)
+- [Licensing](#-licensing)
+
+---
 
 **UniPay UZ** is an all-in-one, robust payment integration library designed specifically for Uzbekistan's leading payment gateways. Whether you're building a massive e-commerce platform or a scalable SaaS product, this tool streamlines the transaction workflows for **Payme, Click, Uzum, Paynet, and Octo**. 
 
@@ -186,6 +233,33 @@ urlpatterns = [
 
 ---
 
+## 🤝 Contributing
+
+Contributions, bug reports, and new-gateway proposals are all welcome! See
+[`CONTRIBUTING.md`](CONTRIBUTING.md) for the development setup, and check the
+[**good first issue**](https://github.com/javlondevv/unipay-uz/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+label for friendly starting points. Please follow our
+[Code of Conduct](CODE_OF_CONDUCT.md).
+
+## ⭐ Support the Project
+
+If UniPay UZ saves you time, the best thank-you is a **GitHub star** — it directly
+helps other developers in Uzbekistan discover the library.
+
+Want a live star button on your own site or docs? Drop in
+[GitHub Buttons](https://buttons.github.io/):
+
+```html
+<!-- Place once, before </body> -->
+<a class="github-button"
+   href="https://github.com/javlondevv/unipay-uz"
+   data-icon="octicon-star"
+   data-size="large"
+   data-show-count="true"
+   aria-label="Star javlondevv/unipay-uz on GitHub">Star</a>
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+```
+
 ## 👨‍💻 Meet the Author
 
 **Javlon Baxtiyorov (javlondevv)**
@@ -200,4 +274,4 @@ If this package has helped you or your company streamline payment integrations, 
 
 ## 📄 Licensing
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See [`LICENSE`](LICENSE) for more information.
