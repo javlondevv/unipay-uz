@@ -13,6 +13,9 @@ All notable changes to this project are documented here. This project adheres to
   project" section with a GitHub Buttons embed snippet.
 - Repository hygiene: `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, issue and pull
   request templates, `FUNDING.yml`, and a CI workflow.
+- Demo Docker image published to GHCR (`ghcr.io/javlondevv/unipay-uz`): a FastAPI
+  app (`examples/demo_app.py`) that builds checkout links offline and mounts the
+  Payme/Click webhook handlers, plus a `docker.yml` workflow that publishes it.
 
 ### Fixed
 - README license link pointed to a nonexistent `LICENSE.txt`; now points to
