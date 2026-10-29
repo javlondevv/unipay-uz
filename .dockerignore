@@ -1,0 +1,23 @@
+# Keep the build context to what the image needs.
+.git
+.github
+.gitignore
+.dockerignore
+Dockerfile
+docs
+launch
+assets
+mkdocs.yml
+PKG-INFO
+README.ru.md
+**/__pycache__
+**/*.py[cod]
+*.egg-info
+build
+dist
+.venv
+venv
+.env
+.env.*
+*.pem
+*recovery-codes*

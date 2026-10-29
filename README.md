@@ -44,6 +44,7 @@
 - [Jumpstart Your Integration](#-jumpstart-your-integration)
   - [Generating Checkout Links](#1-generating-checkout-links)
   - [Provider-Specific Details](#2-provider-specific-details)
+- [Run the Demo with Docker](#-run-the-demo-with-docker)
 - [Deep Dive: Django Blueprint](#️-deep-dive-django-blueprint)
 - [Contributing](#-contributing)
 - [Support the Project](#-support-the-project)
@@ -157,6 +158,27 @@ uzum_url = uzum_client.create_payment(
     return_url="https://your-platform.uz/sync"  
 )
 ```
+
+---
+
+## 🐳 Run the Demo with Docker
+
+A small FastAPI demo ([`examples/demo_app.py`](examples/demo_app.py)) is published to GHCR. It starts without any merchant credentials:
+
+```bash
+docker run --rm -p 8000:8000 ghcr.io/javlondevv/unipay-uz:latest
+```
+
+Then open http://localhost:8000/docs, or:
+
+```bash
+curl http://localhost:8000/providers
+curl "http://localhost:8000/checkout/payme?order_id=1&amount=10000"   # also: click, uzum, paynet
+```
+
+The `/webhooks/payme` and `/webhooks/click` endpoints run the library's FastAPI webhook handlers against two in-memory demo orders (`/orders`).
+
+Credentials come only from environment variables (`-e NAME=value`): `PAYME_ID`, `PAYME_KEY`, `CLICK_SERVICE_ID`, `CLICK_MERCHANT_ID`, `CLICK_MERCHANT_USER_ID`, `CLICK_SECRET_KEY`, `UZUM_SERVICE_ID`, `PAYNET_MERCHANT_ID`, and `UNIPAY_TEST_MODE` (default `true`). Anything unset falls back to a fake placeholder such as `demo-payme-key`, so the links it builds will not open a real checkout. **Real payments need real merchant credentials.**
 
 ---
 
